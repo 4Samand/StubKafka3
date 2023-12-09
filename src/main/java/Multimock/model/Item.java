@@ -3,7 +3,8 @@ package Multimock.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.redis.core.RedisHash;
 
-//@RedisHash
+
+@RedisHash("Item")
 public class Item {
     //@Id
     public String name;

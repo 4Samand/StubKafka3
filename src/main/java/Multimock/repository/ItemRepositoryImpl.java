@@ -3,24 +3,25 @@ package Multimock.repository;
 import Multimock.model.Item;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
-import javax.annotation.PostConstruct;
 
 import java.util.Map;
 
 
 @Repository
-public class UserRepository {
+public class ItemRepositoryImpl {
 
-    final Logger logger = LoggerFactory.getLogger(UserRepository.class);
+    final Logger logger = LoggerFactory.getLogger(ItemRepository.class);
+    @Autowired
     private RedisTemplate<String, Object> redisTemplate;
     private HashOperations hashOperations;
 
     //@PostConstruct
 
-    public UserRepository(RedisTemplate redisTemplate) {
+    public ItemRepositoryImpl(RedisTemplate redisTemplate) {
         this.hashOperations = redisTemplate.opsForHash();
     }
 
