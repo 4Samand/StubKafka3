@@ -37,15 +37,6 @@ public class ItemRepositoryImpl {
     public Map<String, Item> getAll(){
         return hashOperations.entries("ITEM");
     }
-    /**
-    public void update(Item item) {
-        hashOperations.put("USER", Item.getUserId(), user);
-        logger.info(String.format("User with ID %s updated", user.getUserId()));
-    }
 
-    public void delete(String userId) {
-        hashOperations.delete("USER", userId);
-        logger.info(String.format("User with ID %s deleted", userId));
-    } */
 }
 
